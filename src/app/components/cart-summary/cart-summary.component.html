@@ -13,7 +13,11 @@
       <a class="dropdown-item"
         ><span class="badge bg-secondary">{{ cartItem.quantity }}</span>
         {{ cartItem.product.productName }}
-        <span (click)="removeFromCart(cartItem.product)" class="badge bg-secondary">X</span></a
+        <span
+          (click)="removeFromCart(cartItem.product)"
+          class="badge bg-secondary"
+          >{{ cartItem.quantity > 1 ? "Azalt" : "Sil" }}</span
+        ></a
       >
     </li>
     <li><hr class="dropdown-divider" /></li>
